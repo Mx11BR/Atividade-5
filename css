@@ -1,0 +1,81 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* Estilos da barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+}
+
+.navbar-logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #1abc9c;
+}
+
+/* Estilos do ícone de hambúrguer */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 30px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
